@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07080a">
+<title>Sign in · Marketing Crew</title>
+<link rel="stylesheet" href="/css/fonts.css"><link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<main class="auth"><div class="box">
+  <a class="logo" href="/"><i></i>Marketing Crew</a>
+  <div class="card" style="margin-top:22px;padding:30px">
+    <form id="f1" novalidate>
+      <span class="pill">No password needed</span>
+      <h1>Sign in or create your account</h1>
+      <p class="d">Enter your email. We will send a 6-digit code. New here? Your workspace is created automatically.</p>
+      <label class="f" for="email">Email address</label>
+      <input class="in" id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required autofocus>
+      <div class="err" id="e1" role="alert"></div>
+      <button class="btn pri" id="b1" style="width:100%;margin-top:6px" type="submit">Email me a code</button>
+    </form>
+    <form id="f2" novalidate hidden>
+      <span class="pill">Check your inbox</span>
+      <h1>Enter your code</h1>
+      <p class="d">We sent a 6-digit code to <b id="shown"></b>. It expires in 10 minutes.</p>
+      <div class="otp" id="otp" role="group" aria-label="6-digit code"></div>
+      <div class="err" id="e2" role="alert"></div>
+      <button class="btn pri" id="b2" style="width:100%;margin-top:6px" type="submit">Verify and continue</button>
+      <div style="display:flex;justify-content:space-between;margin-top:16px">
+        <button class="linkbtn" type="button" id="back">Use a different email</button>
+        <button class="linkbtn" type="button" id="resend" disabled>Resend code</button>
+      </div>
+    </form>
+  </div>
+  <p class="mut" style="font-size:13px;text-align:center;margin-top:18px">By continuing you agree to use this workspace responsibly.</p>
+</div></main>
+<script src="/js/common.js"></script><script src="/js/login.js" defer></script>
+</body>
+</html>
